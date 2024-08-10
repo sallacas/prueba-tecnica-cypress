@@ -19,3 +19,8 @@ Cypress.Commands.add("clearRegisterForm", () => {
   cy.get("#password").clear();
   cy.get("#confirm-password").clear();
 });
+
+Cypress.Commands.add("validateLogin", () => {
+  cy.url().should("eq", "https://test-qa.inlaze.com/panel");
+  cy.get("h2").contains("Welcome to Lorem").should("be.visible");
+});

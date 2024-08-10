@@ -1,0 +1,9 @@
+{
+    "name": "John",
+    "lastname": "Doe",
+    "fullname": "John Doe",
+    "email_correct": "hello@cypress.io",
+    "existing_user": "juan@gmail.com",
+    "password": "Mkelox123.",
+    "short_password": "Pass12."
+}

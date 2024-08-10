@@ -115,14 +115,14 @@ describe("Prueba tecnica", () => {
       cy.get('button[type="submit"]').should("be.enabled");
     });
 
-    it("Formato de contraseña invalido (Contraseña corta)", function () {
+    it("Contraseña corta (menos de 8 caracteres)", function () {
       const { fullname, email_correct, password } = this.data;
       // Ingreso campos requeridos
       cy.get("#full-name").type(fullname);
       cy.get("#email").type(email_correct);
 
       // Caso de prueba: Contraseña corta (menos de 8 caracteres)
-      const short_password = "Cas12";
+      const short_password = "Cas12.";
       cy.get("input#password")
         .type(short_password)
         .invoke("val")
@@ -133,10 +133,10 @@ describe("Prueba tecnica", () => {
         .invoke("val")
         .should("have.length.lessThan", 8);
 
-      cy.get('button[type="submit"]').should("not.be.disabled");
+      cy.get('button[type="submit"]').should("be.disabled");
     });
 
-    it.only("Contraseña sin mayúsculas", function () {
+    it("Contraseña sin mayúsculas", function () {
       const { fullname, email_correct } = this.data;
       // Ingreso campos requeridos
       cy.get("#full-name").type(fullname);
@@ -155,7 +155,7 @@ describe("Prueba tecnica", () => {
       cy.get('button[type="submit"]').should("not.be.enabled");
     });
 
-    it.only("Contraseña sin minusculas", function () {
+    it("Contraseña sin minusculas", function () {
       const { fullname, email_correct } = this.data;
       // Ingreso campos requeridos
       cy.get("#full-name").type(fullname);
@@ -174,7 +174,7 @@ describe("Prueba tecnica", () => {
       cy.get('button[type="submit"]').should("not.be.enabled");
     });
 
-    it.only("Contraseña sin al menos un numero", function () {
+    it("Contraseña sin al menos un numero", function () {
       const { fullname, email_correct } = this.data;
       // Ingreso campos requeridos
       cy.get("#full-name").type(fullname);
@@ -193,7 +193,7 @@ describe("Prueba tecnica", () => {
       cy.get('button[type="submit"]').should("not.be.enabled");
     });
 
-    it.only("Contraseña sin al menos un caracter especial", function () {
+    it("Contraseña sin al menos un caracter especial", function () {
       const { fullname, email_correct } = this.data;
       // Ingreso campos requeridos
       cy.get("#full-name").type(fullname);
@@ -212,7 +212,7 @@ describe("Prueba tecnica", () => {
       cy.get('button[type="submit"]').should("not.be.enabled");
     });
 
-    it.only("Contraseña con formato correcto", function () {
+    it("Contraseña con formato correcto", function () {
       const { fullname, email_correct, password } = this.data;
       // Ingreso campos requeridos
       cy.get("#full-name").type(fullname);

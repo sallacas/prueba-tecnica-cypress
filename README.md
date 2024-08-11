@@ -2,6 +2,12 @@
 
 Evaluar tu conocimiento en el diseño y ejecución de casos de prueba automatizados, utilizando Cypress o Selenium para asegurar la calidad del sistema de registro y autenticación de usuarios en la plataforma.
 
+# Información de la prueba
+
+- Los casos de pruebas diseñados para automatizar se encuentran en el siguiente enlace: [Enlace de diseño](https://docs.google.com/spreadsheets/d/1NZE0UU4KfJgA8L3TXrFeRnN6peBSRS-M/edit?usp=sharing&ouid=115363708547556792577&rtpof=true&sd=true)
+
+- El reporte de bugs encontrados lo encontramos en el siguiente enlace: [Enlace de bug tracker](https://knotty-neem-79b.notion.site/a7840ce1684d4a1aab311409495aed97?v=e9101d9d3f2040098e28bb31388cde91&pvs=4)
+
 # La prueba se realizó con Cypress
 
 ## Como instalar y ejecutar el proyecto
